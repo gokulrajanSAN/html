@@ -1,134 +1,167 @@
 Hello World
 
 <!DOCTYPE html>
-<html lang="en">  <!--en for English -->
-    
+<html lang="en"> <!--en for English -->
+
 <html>
-    <head>  
-        <meta charset="UTF-8">   <!-- character encoding -->
 
-            <!-- meta datas -->
-        <meta name="author" content="Gokul">
-        <meta name="keywords" content="keyword1, keyword2, so on">
-        <meta name="description" content="describtion of the web page (meta datas to search in google) ">
-        
-        <title>HTML Learning</title>
+<head>
+    <meta charset="UTF-8"> <!-- character encoding -->
 
-        <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+    <!-- meta datas -->
+    <meta name="author" content="Gokul">
+    <meta name="keywords" content="keyword1, keyword2, so on">
+    <meta name="description" content="describtion of the web page (meta datas to search in google) ">
 
-            <!-- rel - relation, href - hipertext referance -->
+    <title>HTML Learning</title>
 
-        <link rel="icon" href="favicon.png" type="image/png"> 
+    <!-- rel - relation, href - hipertext referance -->
+    <link rel="icon" href="favicon.png" type="image/png">
 
-        
-    </head>
-    <body>
-        <!-- Headings (h1 to h6 )-->
-        <h1>Headings One</h1>
-        <h2>Headings two</h2>
-        <h3>Headings 3</h3> 
-        <h4>Headings 4</h4>
-        <h5>Headings 5</h5>
-        <h6>Headings 6</h6>
 
-        <p>Lorem(Lorem-autofill paragrap) 
-            <strike>strike</strike> 
-            <strong>strong</strong> 
-            <em>em</em> 
-            <a href="http://google">a(a-anchorTag)hiperlink for google in same tab</a> 
-            <a href="http://google.com" target="_blank">a(target)-hiperlink to google in new tab</a> <abbr title="World Wide Web">WWW(abbr)</abbr> <cite>citeTag</cite> </p>
-        
-        <!-- List (2 types) -->
-        <ol>Order List
+</head>
 
-            <li>List 1</li>
-            <li>list 2</li>
-        </ol>
+<body>
+    <!-- Headings (h1 to h6 )-->
+    <h1>Headings One</h1>
+    <h2>Headings two</h2>
+    <h3>Headings 3</h3>
+    <h4>Headings 4</h4>
+    <h5>Headings 5</h5>
+    <h6>Headings &nbsp;&nbsp;&nbsp;&nbsp;6</h6>
 
-        <ul>Unorder List
-                <li>list 3</li>
-            <li>List4</li>
-        </ul>
+    <!-- Whitespace collapsing - Normally, browsers collapse whitespace.if your HTML code contains consecutive blank spaces, newlines, or tabs, the browser will display the web page with only one whitespace character (usually a blank space).
+    <h6>Headings                     6</h6> 
+    Headings 6 
+    &nbsp; - 1 space,
+    &nbsp;&nbsp;&nbsp; - 3 spaces -->
 
-        <!-- Table (thead-table head,tbody-table body, tr-table row, td- table data) -->
-        <table>
-            <thead> THead
-                <tr>Tr
-                    <th>Name</th>
-                    <th>Email</th>
-                </tr>          
-            </thead>
-            <tbody>
-                <td>Gokul</td>
-                <td>san@gokul.com</td>
-            </tbody>
-        </table>
+    <!-- Lorem - autofill paragrap, lorem10 - 10 words -->
+    <p>Lorem - autofill paragrap, lorem10 - 10 words</p>
 
-<!-- br (line break) -->
+    <!-- Here are the inline elements in HTML:
+<a> <abbr> <acronym> <b> <bdo> <big> <br> <button> <cite> <code> <dfn> <em> <i> <img> <input> <kbd> <label> <map> <object> <output> <q> <samp> <script> <select> <small> <span> <strong> <sub> <sup><textarea> <time> <tt> <var> -->
+
+    <!-- Here are the block-level elements in HTML:
+<address> <article> <aside> <blockquote> <canvas> <dd> <div> <dl> <dt> <fieldset> <figcaption> <figure> <footer> <form> <h1>-<h6> <header> <hr> <li> <main> <nav> <noscript> <ol> <p> <pre> <section><table> <tfoot> <ul> <video> -->
+
+    <strike>strike</strike>
+    <strong>strong</strong>
+    <em>em</em>
+    <br>
+    <a href="http://google">a(a-anchorTag)hiperlink for google in same tab</a>
+    <br>
+    <a href="http://google.com" target="_blank">a(target="_blank")-hiperlink to google in new tab</a>
+    <br>
+    <abbr title="World Wide Web">WWW(abbr)</abbr>
+    <cite>citeTag</cite> </p>
+
+    <address>
+        Dubai kurukusanth <br>
+        Dubai Main road <br>
+        Dubai 600028
+    </address>
+
+     <!-- &lt; lessthan symbol -->
+    <!-- &gt; greaterthan symbol -->
+
+    &lt;&lt;&lt;&copy; Gokul &gt;&gt;&gt;
+
+<hr>
+    <!-- List (2 types) -->
+    <ol>Order List
+
+        <li>List 1</li>
+        <li>list 2</li>
+    </ol>
+
+    <ul>Unorder List
+        <li>list 3</li>
+        <li>List4</li>
+    </ul>
+
+    <!-- Table (thead-table head,tbody-table body, tr-table row, td- table data) -->
+    <table>
+        <thead> THead
+            <tr>Tr
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <td>Gokul</td>
+            <td>san@gokul.com</td>
+        </tbody>
+    </table>
+
+    <!-- br (line break) -->
     <br>
 
-<!-- hr (horizontal rule(horizontal line)) -->
+    <!-- hr (horizontal rule(horizontal line)) -->
     <hr>
 
-        <!-- Forms (inline type-so use "<div>" or "<br>")-->
-        <form action="process.php" method="get">
-           
-            <div>
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="first-name" value="value-clear&then enterName">
-            </div>
-    <br>
-            <label for="">Email</label>
-            <input type="email" name="email" placeholder="placeholder-noNeed to clear" >
-    <br>
-            <div>
-                <label for="">Message</label>
-                <textarea name="message" id="" cols="30" rows="10"></textarea>
-            </div>
-    <br>
-            <div>
-                <label for="gender">Gender</label>
-                <select name="genderSelect"> 
-                    <option  value="male">Male</option>
-                    <!-- selected for default -->
-                    <option selected value="female">Female</option>
-                </select>
-            </div>
-    <br>
-            <div>
-                <label for="">Birth Day</label>
-                <input type="date" name="birthday" id="" >
-            </div>
-    <br>
-            <div>
-                <label for="age">Age:</label>
-                <input type="number" name="age" id="" value="30">
-            </div>
-    <br>
+    <!-- Forms (inline type-so use "<div>" or "<br>")-->
+    <form action="process.php" method="get">
 
-            <!-- Button -->
-            <div>
-                <input type="button" value="Submit">
-            </div>
-            <button>Click Here</button>
+        <div>
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="first-name" value="value-clear&then enterName">
+        </div>
+        <br>
+        <label for="">Email</label>
+        <input type="email" name="email" placeholder="placeholder-noNeed to clear">
+        <br>
+        <div>
+            <label for="">Message</label>
+            <textarea name="message" id="" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <div>
+            <label for="gender">Gender</label>
+            <select name="genderSelect">
+                <option value="male">Male</option>
+                <!-- selected for default -->
+                <option selected value="female">Female</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="">Birth Day</label>
+            <input type="date" name="birthday" id="">
+        </div>
+        <br>
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="" value="30">
+        </div>
+        <br>
 
-            <!-- Image (inline)(self close tag)(looks the file 
+        <!-- Button -->
+        <div>
+            <input type="button" value="Submit">
+        </div>
+        <button>Click Here</button>
+
+        <!-- Image (inline)(self close tag)(looks the file 
                 in the same folder by default, if its in another folder, 
                 have to mention the folder name)(alt - if file not found, shows the text) -->
-<br>
-            <a href="Apple.jpg">
-                <img src="Apple.jpg" alt="No image found" width="200">
-            </a>
+        <br>
+        <a href="Apple.jpg">
+            <img src="Apple.jpg" alt="No image found" width="200">
+        </a>
 
-            <br>
+        <br>
 
-            <!-- quatations -->
-            <blockquote cite="index.html">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam assumenda iusto corporis ea, similique iste officia pariatur error eaque illum debitis voluptatibus quia doloremque ratione consequuntur perferendis quos maxime deserunt!
-            </blockquote>
+        <!-- quatations -->
+        <blockquote cite="index.html">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam assumenda iusto corporis ea, similique
+            iste officia pariatur error eaque illum debitis voluptatibus quia doloremque ratione consequuntur
+            perferendis quos maxime deserunt!
+        </blockquote>
 
 
-        </form>
+    </form>
 
-    </body>
+</body>
+
 </html>
