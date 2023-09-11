@@ -3,6 +3,7 @@ Hello World
 <!DOCTYPE html>
 <html lang="en"> <!--en for English -->
 <html>
+
 <head>
     <meta charset="UTF-8"> <!-- character encoding -->
 
@@ -18,95 +19,115 @@ Hello World
 </head>
 
 <body>
-    <!-- Headings (h1 to h6 )-->
-    <h1>Headings One</h1>
-    <h2>Headings two</h2>
-    <h3>Headings 3</h3>
-    <h4>Headings 4</h4>
-    <h5>Headings 5</h5>
-    <h6>Headings &nbsp;&nbsp;&nbsp;&nbsp;6</h6>
+    <header>
+        <!-- Headings (h1 to h6 )-->
+        <h1>Headings One</h1>
+        <nav aria-labelledby="primary navigation">
+            <h2 id="primary navigation">H2 Primary Navigation</h2>
 
-    <!-- Whitespace collapsing - Normally, browsers collapse whitespace.if your HTML code contains consecutive blank spaces, newlines, or tabs, the browser will display the web page with only one whitespace character (usually a blank space).
-    <h6>Headings                     6</h6> 
-    Headings 6 
-    &nbsp; - 1 space,
-    &nbsp;&nbsp;&nbsp; - 3 spaces -->
+            <h3>Headings 3</h3>
+            <h4>Headings 4</h4>
+            <h5>Headings 5</h5>
 
-    <!-- Lorem - autofill paragrap, lorem10 - 10 words -->
-    <p>Lorem - autofill paragrap, lorem10 - 10 words</p>
+        </nav>
+    </header>
 
-    <!-- Here are the inline elements in HTML:
+    <main>
+        <section>
+            <!-- Lorem - autofill paragrap, lorem10 - 10 words -->
+            <p>Lorem - autofill paragrap, lorem10 - 10 words</p>
+
+            <!-- Here are the inline elements in HTML:
 <a> <abbr> <acronym> <b> <bdo> <big> <br> <button> <cite> <code> <dfn> <em> <i> <img> <input> <kbd> <label> <map> <object> <output> <q> <samp> <script> <select> <small> <span> <strong> <sub> <sup><textarea> <time> <tt> <var> -->
 
-    <!-- Here are the block-level elements in HTML:
+            <!-- Here are the block-level elements in HTML:
 <address> <article> <aside> <blockquote> <canvas> <dd> <div> <dl> <dt> <fieldset> <figcaption> <figure> <footer> <form> <h1>-<h6> <header> <hr> <li> <main> <nav> <noscript> <ol> <p> <pre> <section><table> <tfoot> <ul> <video> -->
 
-    <strike>strike</strike>
-    <strong>strong</strong>
-    <em>em</em>
-    <br>
-    <a href="http://google">a(a-anchorTag)hiperlink for google in same tab</a>
-    <br>
-    <a href="http://google.com" target="_blank">a(target="_blank")-hiperlink to google in new tab</a>
-    <br>
-    <abbr title="World Wide Web">WWW(abbr)</abbr>
-    <cite>citeTag</cite> </p>
+            <strike>strike</strike>
+            <strong>strong</strong>
+            <em>em</em>
+            <mark>highlight</mark>
+            <time datetime="09:00">09 PM</time>
+            <time datetime="PT3H">3 hours</time>
+            <br> <!--break the line for inline element, br*5 (5times)-->
 
-    <address>
-        Dubai kurukusanth <br>
-        Dubai Main road <br>
-        Dubai 600028
-    </address>
+            <abbr title="World Wide Web">WWW(abbr)</abbr>
+            <cite>citeTag</cite> </p>
 
-    <!-- &lt; lessthan symbol -->
-    <!-- &gt; greaterthan symbol -->
+            <address>
+                Address:
+                Dubai kurukusanth <br>
+                Dubai Main road <br>
+                Dubai 600028
+            </address>
 
-    &lt;&lt;&lt;&copy; Gokul &gt;&gt;&gt;
+            <!-- &lt; lessthan symbol -->
+            <!-- &gt; greaterthan symbol -->
+            &lt;&lt;&lt;&copy; Gokul &gt;&gt;&gt;
+        </section>
+    </main>
 
-    <hr>
+    <hr> <!-- Horizontal line -->
 
-    
-    <p>Dowload <a href="favicon.png" download="favicon">Image</a></p>
+    <article>
+        <!-- List (3 types) -->
+        <ol>
+            <h3>Order List</h3>
+            <li>
+                <p>This is the image</p>
+                <figure>
+                    <img src="favicon.png" alt="Favicon" loading="lazy" title="My Windows wallpaper"></a>
+                    <figcaption>This is the caption for the image</figcaption>
+                </figure>
+            </li>
+            <!-- src (path of the image), 
+             alt (text if img not load),
+             title (mouse hover on the img, text will show up) 
+             loading (1.eager-load at first(default) 2.lazy-load when only we scroll down) -->
+        </ol>
 
-    <!-- List (3 types) -->
-    <ol>
-        <h3>Order List</h3>
-        <li>List 1</li>
-        <li>list 2</li>
-    </ol>
+        <div>
+            <ul>
+                <h3>Unorder List</h3>
+                <li>Download this <a href="favicon.png" download>Image</a></li>
+                <li>send me a <a href="mailto:san@san.com">Mail</a></li>
+                <li>give me a <a href="tel:+91 1234567890">Call</a></li>
+                <li><a href="http://google.com">a(a-anchorTag)</a>hiperlink for google in same tab</li>
+                <li><a href="http://google.com" target="_blank">a(target="_blank")</a> hiperlink in new tab</li>
+                <li><a href="/">Home</a>(index.html)</li> <!-- / - index.html -->
+            </ul>
+        </div>
 
+        <span>
+            <!-- description list -->
+            <dl>
+                <!-- description term -->
+                <dt>North pole</dt>
+                <!-- description detail -->
+                <dd>Cold areaPlace</dd>
 
-    <ul>
-        <h3>Unorder List</h3>
-        <li>list 3</li>
-        <li>List4</li>
-    </ul>
+                <dt>South pole</dt>
+                <dd>tropical areas</dd>
+            </dl>
+        </span>
+    </article>
 
-    <!-- description list -->
-    <dl>
-        <!-- description term -->
-        <dt>North pole</dt>
-        <!-- description detail -->
-        <dd>Cold areaPlace</dd>
-
-        <dt>South pole</dt>
-        <dd>tropical areas</dd>
-    </dl>
-
-
-    <!-- Table (thead-table head,tbody-table body, tr-table row, td- table data) -->
-    <table>
-        <thead> THead
-            <tr>Tr
-                <th>Name</th>
-                <th>Email</th>
-            </tr>
-        </thead>
-        <tbody>
-            <td>Gokul</td>
-            <td>san@gokul.com</td>
-        </tbody>
-    </table>
+    <!-- sideBar to the page -->
+    <aside>
+        <details>
+            <summary>
+                Whitespace collapsing
+            </summary>
+            <p>
+                Normally, browsers collapse whitespace.if your HTML code contains consecutive
+                blank spaces, newlines, or tabs, the browser will display the web page with only one whitespace
+                character (usually a blank space).
+            </p>
+            <code>
+            one&nbsp;space, three &nbsp; &nbsp; &nbsp; spaces
+            </code>
+        </details>
+    </aside>
 
     <!-- br (line break) -->
     <br>
@@ -114,9 +135,34 @@ Hello World
     <!-- hr (horizontal rule(horizontal line)) -->
     <hr>
 
+    <section>
+        <style>
+            tr, th, td{
+                border: 1px solid red;
+                border-collapse: collapse;
+            }
+        </style>
+        <!-- Table (thead-table head,tbody-table body, tr-table row, td- table data) -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <td>Gokul</td>
+                <td>san@gokul.com</td>
+            </tbody>
+
+            <tr>new row</tr>
+
+        </table>
+    </section>
+
     <!-- Forms (inline type-so use "<div>" or "<br>")-->
     <form action="process.php" method="get">
-
         <div>
             <label for="firstName">First Name</label>
             <input type="text" id="firstName" name="first-name" value="value-clear&then enterName">
