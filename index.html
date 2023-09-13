@@ -9,26 +9,26 @@ Hello World
 
     <!-- meta datas -->
     <meta name="author" content="Gokul">
-    <meta name="keywords" content="keyword1, keyword2, so on">
     <meta name="description" content="describtion of the web page (meta datas to search in google) ">
+    <meta name="keywords" content="keyword1, keyword2, so on">
 
     <title>HTML Learning</title>
 
-    <!-- rel - relation, href - hipertext referance -->
-    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <!-- link:favicon, href (file path) -->
+
 </head>
 
 <body>
     <header>
-        <!-- Headings (h1 to h6 )-->
-        <h1>Headings One</h1>
-        <nav aria-labelledby="primary navigation">
-            <h2 id="primary navigation">H2 Primary Navigation</h2>
+        <!-- Headings (h1 to h6) -->
+        <h1>Headings (h1 to h6)</h1>
 
+        <nav aria-labelledby="primary navigation">
+            <h2 id="primary navigation">nav - aria-labelledby="primary navigation"</h2>
             <h3>Headings 3</h3>
             <h4>Headings 4</h4>
             <h5>Headings 5</h5>
-
         </nav>
     </header>
 
@@ -46,7 +46,7 @@ Hello World
             <strike>strike</strike>
             <strong>strong</strong>
             <em>em</em>
-            <mark>highlight</mark>
+            <mark>mark</mark>
             <time datetime="09:00">09 PM</time>
             <time datetime="PT3H">3 hours</time>
             <br> <!--break the line for inline element, br*5 (5times)-->
@@ -55,7 +55,7 @@ Hello World
             <cite>citeTag</cite> </p>
 
             <address>
-                Address:
+                address: <br>
                 Dubai kurukusanth <br>
                 Dubai Main road <br>
                 Dubai 600028
@@ -72,31 +72,39 @@ Hello World
     <article>
         <!-- List (3 types) -->
         <ol>
-            <h3>Order List</h3>
+            <h3>ol: Order List</h3>
             <li>
-                <p>This is the image</p>
+                <p>
+                    figure> img, figcaption<br>
+                    img tag:
+                    src (path of the image), <br>
+                    alt (text if img not load), <br>
+                    title (mouse hover on the img, text will show up) <br>
+                    loading: 1.eager-load at first(default) 2.lazy-load when only we scroll down <br>
+                </p>
                 <figure>
                     <img src="favicon.png" alt="Favicon" loading="lazy" title="My Windows wallpaper"></a>
-                    <figcaption>This is the caption for the image</figcaption>
+                    <figcaption>figcaption (caption for image)</figcaption>
                 </figure>
             </li>
-            <!-- src (path of the image), 
-             alt (text if img not load),
-             title (mouse hover on the img, text will show up) 
-             loading (1.eager-load at first(default) 2.lazy-load when only we scroll down) -->
         </ol>
 
-        <div>
-            <ul>
-                <h3>Unorder List</h3>
-                <li>Download this <a href="favicon.png" download>Image</a></li>
-                <li>send me a <a href="mailto:san@san.com">Mail</a></li>
-                <li>give me a <a href="tel:+91 1234567890">Call</a></li>
-                <li><a href="http://google.com">a(a-anchorTag)</a>hiperlink for google in same tab</li>
-                <li><a href="http://google.com" target="_blank">a(target="_blank")</a> hiperlink in new tab</li>
-                <li><a href="/">Home</a>(index.html)</li> <!-- / - index.html -->
-            </ul>
-        </div>
+
+        <ul>
+            <h3>ul: Unorder List</h3>
+
+            <!-- Image (inline)(self close tag)(looks the file 
+                in the same folder by default, if its in another folder, 
+                have to mention the folder name)(alt - if file not found, shows the text) -->
+            <li>Download this <a href="favicon.png" download>Image(download attribute in 'a' tag)</a></li>
+            
+            <li>send me a <a href="mailto:san@san.com">Mail (a:mail)</a></li>
+            <li>give me a <a href="tel:+91 1234567890">Call (a:tel)</a></li>
+            <li><a href="http://google.com">a(a:link)</a>hyperlink for google in same tab</li>
+            <li><a href="http://google.com" target="_blank">a(target="_blank")</a> hyperlink in new tab</li>
+            <li><a href="/">Home</a>(href="/" - index.html)</li> <!-- / - index.html -->
+        </ul>
+
 
         <span>
             <!-- description list -->
@@ -116,10 +124,10 @@ Hello World
     <aside>
         <details>
             <summary>
-                Whitespace collapsing
+                Whitespace collapsing (details>summary - show only summary with dropDown icon [for full content (p)])
             </summary>
             <p>
-                Normally, browsers collapse whitespace.if your HTML code contains consecutive
+                (p)Normally, browsers collapse whitespace.if your HTML code contains consecutive
                 blank spaces, newlines, or tabs, the browser will display the web page with only one whitespace
                 character (usually a blank space).
             </p>
@@ -137,52 +145,132 @@ Hello World
 
     <section>
         <style>
-            tr, th, td{
+            table,
+            caption,
+            tr,
+            th,
+            td {
                 border: 1px solid red;
                 border-collapse: collapse;
             }
         </style>
+
         <!-- Table (thead-table head,tbody-table body, tr-table row, td- table data) -->
         <table>
+            <caption>caption tag</caption>
             <thead>
                 <tr>
+                    <!-- &nbsp; for empty cell -->
+                    <th>&nbsp;</th>
+
                     <th>Name</th>
                     <th>Email</th>
                 </tr>
             </thead>
 
             <tbody>
+                <th>th 1</th>
                 <td>Gokul</td>
                 <td>san@gokul.com</td>
+                <tr>
+                    <th>th 2</th>
+                    <td>san</td>
+                    <td>@gmail</td>
+                </tr>
+                <tr>
+                    <th>th 3</th>
+                    <td rowspan="2">merge rows by rowspan="2"</td>
+                    <td>1st line</td>
+                </tr>
+                <tr>
+                    <th>th 4</th>
+                    <td>2nd line</td>
+                </tr>
             </tbody>
-
-            <tr>new row</tr>
-
+            <tfoot>
+                <tr>
+                    <td colspan="3">Join 3 columns by colspan="3"</td>
+                </tr>
+            </tfoot>
         </table>
     </section>
+    <hr>
 
     <!-- Forms (inline type-so use "<div>" or "<br>")-->
     <form action="process.php" method="get">
+        <!-- wrap (label & input) by p is recomend than div-->
+        <p>
+            <label for="firstName">value</label>
+            <!-- label(Attribute)- value, placeholder -->
+
+            <input type="text" id="firstName" name="first-name" value="clear&then enterName">
+            <!-- input - autocomplete, required, autofocus -->
+            <!-- input types - text, email, password, button, date -->
+        </p>
         <div>
-            <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="first-name" value="value-clear&then enterName">
+            <label for="">placeholder</label>
+            <input type="" name="email" autocomplete="on" placeholder="noNeed to clear">
         </div>
-        <br>
-        <label for="">Email</label>
-        <input type="email" name="email" placeholder="placeholder-noNeed to clear">
-        <br>
+        <p>
+            <label for="">Password</label>
+            <input type="password" required>
+        </p>
+
+        <label for="">Phone</label>
+        <!-- pattern="[0-9]{10}" -accept 10 digits nums only-->
+        <input type="text" pattern="[0-9]{10}" placeholder="+91 ">
+
+        <label for="">min max Number step(num of gap)</label>
+        <input type="number" name="" id="" min="1" max="10" step="2">
         <div>
             <label for="">Message</label>
             <textarea name="message" id="" cols="30" rows="10"></textarea>
         </div>
-        <br>
+
         <div>
-            <label for="gender">Gender</label>
-            <select name="genderSelect">
-                <option value="male">Male</option>
-                <!-- selected for default -->
-                <option selected value="female">Female</option>
+            <label for="drinks">Drinks</label>
+            <select name="select" id="" multiple size="6">
+                <!-- multiple -select multiple items by holding Ctrl -->
+                <!-- size="6" - show 6 items, more when scroll -->
+               
+                <optgroup label="Hot">
+                    <option value="tea">Tea</option>
+                    <option value="coffee">Coffee</option>
+                    <option value="Latte">Latte</option>
+                    <option value="Espresso">Espresso</option>
+                </optgroup>
+
+                <optgroup label="soft">
+                    <option value="coke">coke</option>
+                    <option value="">pepsi</option>
+                </optgroup>
             </select>
+
+            <fieldset>
+                <legend>fieldset(box), legend(caption)</legend>
+                <p>
+                    <label for="">Fav Coffee</label>
+                    <input type="text" list="coffee-list">
+                    <datalist id="coffee-list">
+                        <!-- input>list = datalist>id (should be same) -->
+                        <option value="Coffee">
+                        <option value="Tea">
+                        <option value="Latte">
+                        <option value="Espresso">
+                    </datalist>
+                </p>
+            </fieldset>
+
+            <p>
+                <!-- radio - can & must select only one  -->
+                <input type="radio" name="radio" id="radio">
+                <label for="radio">radio (can & must select only one)</label>
+            </p>
+            <p>
+                <!-- checkBox - can select multiple, can select none -->
+                <input type="checkbox" name="checkBox" id="checkBox">
+                <label for="checkBox">Check Box (can select multiple, can select none)</label>
+            </p>
         </div>
         <br>
         <div>
@@ -199,17 +287,18 @@ Hello World
         <!-- Button -->
         <div>
             <input type="button" value="Submit">
+
+            <!-- type="submit" -get request, shows full form info in URL include password (not recomd)-->
+            <button type="submit">Submit(get request, shows full form info in URL include password (not
+                recomd))</button>
+            <button>Click Here</button>
+
+            <!-- form-action="URL" form-method="post" -->
+            <button type="submit" formaction="URL" formmethod="post">formaction="URL" formmethod="post"</button>
+
+            <!-- reset entered values in the form -->
+            <input type="reset" value="Reset">
         </div>
-        <button>Click Here</button>
-
-        <!-- Image (inline)(self close tag)(looks the file 
-                in the same folder by default, if its in another folder, 
-                have to mention the folder name)(alt - if file not found, shows the text) -->
-        <br>
-        <a href="Apple.jpg">
-            <img src="Apple.jpg" alt="No image found" width="200">
-        </a>
-
         <br>
 
         <!-- quatations -->
@@ -220,7 +309,7 @@ Hello World
         </blockquote>
     </form>
 
-    <a href="#">Back to top</a>
+    <a href="#">Back to top (href="#")</a>
 </body>
 
 </html>
